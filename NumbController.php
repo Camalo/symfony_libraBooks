@@ -15,8 +15,7 @@ class NumbController
     {
         $num = mt_rand(0,100);
 
-        return new Response(
-            '<html><body>The random number is '.$num.'</body></html>'
-        );
+        
+        return $this->render('numb.html.twig', array('number' => $num ));
     }
 }
